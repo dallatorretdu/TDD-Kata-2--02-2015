@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class KataTest {
 	private boolean check(int n, String s) {
-		assertEquals( n , new Kata().Add(s));
+		assertEquals( n , new Kata().add(s));
 		return true;
 	};
 	
@@ -49,7 +49,7 @@ public class KataTest {
 	}
 	@Test
 	public void delimiter_check() {
-		assertEquals( 3 , new Kata().next_delimiter_position("123,123", ","));
+		assertEquals( 3 , new Kata().nextDelimiterPosition("123,123", ","));
 	}
 	@Test
 	public void new_delimiter() {
@@ -57,12 +57,12 @@ public class KataTest {
 	}
 	@Test(expected=IllegalArgumentException.class)
 	public void negativetest() {
-		new Kata().Add("4,5,-1,7");
+		new Kata().add("4,5,-1,7");
 	}
 	
 	@Test
 	public void findNegatives() {
-		assertEquals("-3 -2", new Kata().List_Negatives("1,2,-3,2,-2", ","));
+		assertEquals("-3 -2", new Kata().listNegatives("1,2,-3,2,-2", ","));
 	}
 	@Test
 	public void noNumbersBiggerThanThousand() {
@@ -70,7 +70,7 @@ public class KataTest {
 	}
 	@Test
 	public void findBigDelimiter() {
-		assertEquals("***", new Kata().Find_Big_Delimiter("***]\n"));
+		assertEquals("***", new Kata().findBigDelimiter("***]\n"));
 	}
 	@Test
 	public void bigDelimiter() {
